@@ -1,0 +1,55 @@
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    background-color: #ebe6e4;
+    padding: 20px;
+}
+
+/* Main content styling */
+body > p {
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    margin-top: 20px;
+}
+
+/* Buttons styles */
+button {
+    background-color: #ebe6e4;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ddd;
+    transition: 0.3s;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    background-color: #ebe6e4;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    button {
+        width: 100%;
+    }
+}

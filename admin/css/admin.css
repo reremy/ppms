@@ -1,0 +1,133 @@
+body {
+font-family: "Raleway", sans-serif;
+margin: 0;
+padding: 0;
+background-color: white;
+}
+
+/* Top navigation bar */
+.topNav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color:#ebe6e4;
+color: black;
+padding: 10px 20px;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%; /* Full width */
+z-index: 2;
+box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.topNav img {
+height: 50px;
+}
+
+.topNav a {
+color: black;
+text-decoration: none;
+font-size: 16px;
+display: flex;
+align-items: center;
+}
+
+.topNav a:hover {
+color: #f1f1f1;
+}
+
+.topNav .fa {
+margin-right: 8px;
+}
+
+/* Sidenav */
+.sidenav {
+position: fixed;
+height: 100%;
+width: 200px;
+top: 60px; /* Match the height of the topNav */
+left: 0;
+background-color: white;
+overflow-x: hidden;
+padding-top: 20px;
+}
+
+/* Main content */
+.main {
+margin-top: 70px; /* Match the height of the topNav */
+margin-left: 200px; /* Same as the width of the sidenav */
+padding: 10px 10px;
+}
+
+/* Dropdown button styles */
+.sidenav a, .dropdown-button {
+padding: 6px 8px 6px 16px;
+text-decoration: none;
+color: black;
+display: block;
+border: none;
+background: none;
+width: 100%;
+text-align: left;
+cursor: pointer;
+outline: none;
+font-size: 16px;
+}
+
+.sidenav a:hover, .dropdown-button:hover {
+color: black;
+background-color: #ddd;
+transition: 0.3 ease;
+}
+
+/* Active state for dropdown */
+.active {
+background-color: grey;
+color: white;
+}
+
+/* Dropdown container (hidden by default) */
+.dropdown-container {
+display: none;
+background-color: white;
+padding-left: 8px;
+}
+
+.dropdown-button.active + .dropdown-container {
+    display: block; /* Shown when active */
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+float: right;
+padding-right: 8px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-height: 450px) {
+.sidenav {
+padding-top: 15px;
+}
+.sidenav a {
+font-size: 16px;
+}
+}
+
+input, textarea, select, select option, button {
+font-family: "Raleway", sans-serif; 
+}
+
+.rowform {
+max-width: 400px;
+padding: 20px;
+background-color: #f3f3f3;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+margin: auto;
+}
+
+.section {    
+padding: 10px;
+margin: auto;    
+}
