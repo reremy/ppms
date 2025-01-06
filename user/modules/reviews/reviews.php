@@ -80,7 +80,7 @@ $result = mysqli_query($conn, $sql_reviews);
 
     <div class="userTopNav">
         <div class="logo-container">
-            <a href="http://localhost/ppms/user/index.php"><img src="http://localhost/ppms/img/logo.png" alt="logo"
+            <a href="http://localhost/ppms/user/index.php"><img src="http://localhost/ppms/user/img/logo.png" alt="logo"
                     class="logo"></a>
         </div>
 
@@ -105,19 +105,28 @@ $result = mysqli_query($conn, $sql_reviews);
 
     <main>
         <h2 style="text-align: center;">Reviews</h2>
+
+        <div>
+            <a href="http://localhost/ppms/user/modules/reviews/createReviewForm.php">Make Review</a>
+        </div>
+
         <div class="review-container">
             <?php
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<div class="review-card">';
+                    $reviewDate = strtotime($row["reviewDate"]);
+                    $isNew = (time() - $reviewDate <= 604800); // 7 days
+                    $cardClass = $isNew ? "review-card new-review" : "review-card";
+
+                    echo "<div class='$cardClass'>";
                     echo '<h3>' . htmlspecialchars($row["productName"]) . '</h3>';
                     echo '<p>' . htmlspecialchars($row["reviewText"]) . '</p>';
                     echo '<div class="rating">Rating: ' . str_repeat('⭐', $row["rating"]) . '</div>';
-                    echo '<small>Reviewed by User ' . htmlspecialchars($row["reviewBy"]) . ' on ' . date("F j, Y", strtotime($row["reviewDate"])) . '</small>';
+                    echo '<small>Reviewed by User ' . htmlspecialchars($row["reviewBy"]) . ' on ' . date("F j, Y, g:i a", strtotime($row["reviewDate"])) . '</small>';
                     echo '</div>';
                 }
             } else {
-                echo '<p style="text-align: center;">No reviews available at the moment.</p>';
+                echo '<p style="text-align: center;">No reviews yet. <a href="createReviewForm.php">Be the first to leave a review!</a></p>';
             }
 
             // Free the result and close the connection

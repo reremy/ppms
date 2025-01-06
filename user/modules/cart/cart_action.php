@@ -65,7 +65,7 @@ if (!empty($_GET["action"])) {
 <body>
     <div class="userTopNav">
         <div class="logo-container">
-            <a href="http://localhost/ppms/user/index.php"><img src="http://localhost/ppms/img/logo.png" alt="logo"
+            <a href="http://localhost/ppms/user/index.php"><img src="http://localhost/ppms/user/img/logo.png" alt="logo"
                     class="logo"></a>
         </div>
 
@@ -130,7 +130,8 @@ if (!empty($_GET["action"])) {
                             <td style="text-align:center;" colspan="2">
                                 <strong><?php echo "RM " . number_format($total_price, 2); ?></strong>
                             </td>
-                            <form method="post" action="checkout.php?price=<?php echo $total_price; ?>">
+                            <form method="post"
+                                action="http://localhost/ppms/payment/checkout.php?price=<?php echo $total_price; ?>">
                                 <input type="hidden" name="tot_price" value="<?php echo $total_price; ?>">
                                 <td style="text-align:center;"><button type="submit">Checkout</button></td>
                             </form>

@@ -47,7 +47,7 @@ mysqli_close($conn);
 <body>
     <div class="userTopNav">
         <div class="logo-container">
-            <a href="http://localhost/ppms/user/index.php"><img src="http://localhost/ppms/img/logo.png" alt="logo"
+            <a href="http://localhost/ppms/user/index.php"><img src="http://localhost/ppms/user/img/logo.png" alt="logo"
                     class="logo"></a>
         </div>
 

@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure full height for sticky footer setup */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  background-color: #ffffff;
+}
+
+/* Main container for flexbox layout */
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Responsive image styling */
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  border-style: none;
+  vertical-align: middle;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  color: #444444;
+  background-color: #e9e8e6;
+  margin-top: 0;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #444444;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  text-decoration: underline;
+}
+
+/* table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;  
+  padding: 20px;
+} */
+
+table {
+  width: 90%;               /* Adjust table width to leave space on sides */
+  max-width: 800px;         /* Set a maximum width for larger screens */
+  margin: 0 auto;           /* Center the table */
+  border-collapse: collapse;
+  text-align: center;  
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional: Light background color */
+  border: 1px solid #ddd;   /* Optional: Light border around table */
+  border-radius: 8px;       /* Optional: Rounded corners */
+}
+
+/* This is the row to column styling */
+.row {
+	display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */	
+}
+
+.col-left {
+  flex: 1; /* Takes 1/3 of the available width */
+  text-align: center; /* Centers content horizontally */
+  padding: 15px;
+}
+
+.col-right {
+  flex: 2; /* Takes 2/3 of the available width */
+  padding: 15px;
+}
+
+/* Style the footer 
+.footer {
+  background-color: #e9e8e6;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+}
+*/
+/* Footer styling */
+.footer {
+  background-color: #e9e8e6;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+  margin-top: auto; /* Sticky footer */
+}
+
+/* Media query for smaller screens (e.g., 768px) */
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+		width: 95%;
+  }
+	
+	[class*="col-"] {
+		flex: none; /* Reset the flex property to prevent stretching */
+		width: 100%;
+  }  
+}
+
+.row-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column-grid {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column-grid img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column-grid {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column-grid {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.rowform {
+  width: 500px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);margin: auto;
+}
+
+input, textarea, select, select option, button {
+	font-family: "Raleway", sans-serif; 
+}

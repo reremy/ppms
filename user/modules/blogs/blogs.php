@@ -81,7 +81,7 @@ $result = mysqli_query($conn, $sql_blog);
 
     <div class="userTopNav">
         <div class="logo-container">
-            <a href="http://localhost/ppms/user/index.php"><img src="http://localhost/ppms/img/logo.png" alt="logo"
+            <a href="http://localhost/ppms/user/index.php"><img src="http://localhost/ppms/user/img/logo.png" alt="logo"
                     class="logo"></a>
         </div>
 
@@ -115,7 +115,7 @@ if (mysqli_num_rows($result) > 0) {
         if (!empty($row['blogImg'])) {
             echo '<img src="http://localhost/ppms/admin/modules/blogs/' . $row["blogImg"] . '" alt="' . $row["blogEntry"] . '">';
         } else {
-            echo '<img src="http://localhost/ppms/img/default_blog.png" alt="Default Blog Image">';
+            echo '<img src="http://localhost/ppms/user/img/default_blog.png" alt="Default Blog Image">';
         }
         
         // Display blog title and author
